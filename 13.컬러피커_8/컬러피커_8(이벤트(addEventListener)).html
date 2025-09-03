@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html lang="ko">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>컬러피커_8</title>
+                <link rel="stylesheet" href="style.css">
+                <script src="js.js" defer></script>
+        </head>
+<body>
+
+    <!-- 
+        컬러 코드를 표시하는 '계기'
+
+        1. 계기란
+        = 클릭,입력,스크롤 등을 했을때 자바스크립트는 사용자의 조작에 따라 어떤 동작이 발생하는 '계기'를 감지할 수 있다
+         계기 = 이벤트
+        
+        2. 기본적인 이벤트 작성 방법
+        = 이벤트 설정에는 'addEventListener()'라는 메서드를 사용
+        = '무엇이','어떻게 하면','어떻게 되는가'를 'addEventListener()'메서드로 표현
+
+        작성법
+         변수명.addEventListener(선택되면,어떻게 되는가){코드내용}
+         선택되면 : 클릭대상
+         어떻게 되는가 : 클릭되고 작동되는 방법
+
+         3. 익명함수
+         = 함수명을 지정하지 않고 내용만 쓰기
+         = 함수 내용을 직접 입력할 수도 있다
+         = '익명함수'의 장점은 함수를 사전에 정의할 필요도 함수 이름을 지을 필요도 없다는 것이다
+            ex)
+                변수명.addEventListener('이벤트 메서드', () => {
+                    code실행
+                });
+        
+    -->
+
+    <div>
+        <p id="coloText">컬러 코드 검색</p>
+            <input type="color" id="colorPicker">
+    </div>
+
+    <script>
+        // console.log(document.querySelector('#colorPicker').value
+        // document.querySelector('#coloText').innerHTML = '<h1>컬러 코드 : </h1>';
+        // document.querySelector('#coloText').textContent = `컬러코드 : ${document.querySelector('#colorPicker').value}`;
+    
+        // const text = document.querySelector('#coloText');
+        // const color = document.querySelector('#colorPicker');
+
+        // const colorBg = () => {
+        //     document.body.style.backgroundColor = color.value;
+        //     text.textContent = `컬러 코드 : ${color.value}`;
+        // }
+        
+        // color.addEventListener('input', colorBg);
+      
+        const text = document.querySelector('#coloText');
+        const color = document.querySelector('#colorPicker');
+
+        const colorBg = () => {
+            document.body.style.backgroundColor = color.value;
+            text.textContent = `컬러코드 : ${color.value}`;
+        }
+
+        color.addEventListener('input',colorBg);
+    </script>
+
+    
+</body>
+</html>

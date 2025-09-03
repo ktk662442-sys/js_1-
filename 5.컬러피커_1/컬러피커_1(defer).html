@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="ko">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>컬러피커_1</title>
+                <link rel="stylesheet" href="style.css">
+                <script src="js.js" defer></script>
+        </head>
+<body>
+
+    <!-- 
+        <script src="js.js" defer></script>
+        
+        1. 'defer'속성을 붙이는 이유 
+        = 웹페이지를 읽는 속도를 빠르게 하기 위해서
+        = '<script>' 태그에 'defer' 속성이 있는 경우 '하나의 처리가 종료되는 것을 기다리지 않고 다음 것을 처리하는
+        '비동기''로 처리한다
+
+        2. <head> 태그 안에 'defer'를 붙여 자바스크립트 파일을 불러오는 경우
+        = <script> 태그에 'defer' 속성을 지정한다
+        = 'html'해석이 중단되지 않고 자바스크립트 파일을 동시에 불러온다
+        = 'html' 해석이 끝난 후 불러온 자바스크립트를 실행
+    -->
+
+    <div>
+        <p id="coloText">컬러 코드 검색</p>
+            <input type="color" id="colorPicker">
+    </div>
+    
+</body>
+</html>

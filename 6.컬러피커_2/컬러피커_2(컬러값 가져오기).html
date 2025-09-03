@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html lang="ko">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>컬러피커_2</title>
+                <link rel="stylesheet" href="style.css">
+                <script src="js.js" defer></script>
+        </head>
+<body>
+
+    <!-- 
+       2. 컬러값 가져오기
+       ex) document.querySelector('셀렉터'); = 객체.메서드('피라미터');
+       = querySelector : id,class,시맨틱 태그 등의 html의 태그 선택자의 값을 가져온다
+       = null : '아무것도 없다'라는 뜻 / 즉 태그 등 '아무것도 없는 값' 이라는 뜻
+       = value : html에 저장한 값을 자바스크립트에 와서 그 값을 가져온다
+            변수 (Variable): 이게 바로 냉장고야! 🚪 안에 뭔가 보관하고 있지
+            Value (밸류): 냉장고 안에 들어있는 싱싱한 과일! 🍎🍌🥭 이게 바로 진짜 데이터 덩어리인 거야
+            코드 (Code): 과일을 먹고 싶은 사람! 🚶‍♀️🚶‍♂️
+            = **냉장고(변수)**를 열어서 그 안에 있는 **과일(Value)**을 꺼내 와야 먹을 수 있듯이 **코드(사람)** 또한 필요한면 변수를 찾아서 그안에 value를 가져와서 쓴다
+    -->
+
+    <div>
+        <p id="coloText">컬러 코드 검색</p>
+            <input type="color" id="colorPicker" value="#00bbdd">
+    </div>
+
+    <script>
+        // console.log(document.querySelector('#colorPicker').value);
+
+       console.log(document.querySelector('#colorPicker').value);
+    </script>
+    
+</body>
+</html>

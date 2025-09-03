@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html lang="ko">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>컬러피커_9</title>
+                <link rel="stylesheet" href="style.css">
+                <script src="js.js" defer></script>
+        </head>
+<body>
+
+    <!-- 
+        조건문
+        = 조건절 : 값의 내용에 따라 프로그램을 다르게 실행
+        = if문 : 조건을 붙이고 '조건에 들어맞으면 OO를, 조건이 맞지 않으면 XX를 처리'        
+        = else문 : 조건에 해당하지 않는 경우 / 'if','else if'조건을 총족하지 않는 것이 조건 / '()'은 필요없다
+        = else if문 : 'if'문을 총족하지 않고 다음 조건을 넣을 때 사용
+
+        ex)
+            if(조건1){
+                '조건1'이 총족하면  실행
+            }else if(조건2){
+                '조건2'이 총족하면  실행
+            }else if(조건3){
+                '조건3'이 총족하면  실행
+            }else{
+                어떤 조건도 만족하지 않으면 실행
+            }
+    -->
+
+    <div>
+        <p id="coloText">컬러 코드 검색</p>
+            <input type="color" id="colorPicker">
+    </div>
+
+    <script>
+        // console.log(document.querySelector('#colorPicker').value
+        // document.querySelector('#coloText').innerHTML = '<h1>컬러 코드 : </h1>';
+        // document.querySelector('#coloText').textContent = `컬러코드 : ${document.querySelector('#colorPicker').value}`;
+    
+        // const text = document.querySelector('#coloText');
+        // const color = document.querySelector('#colorPicker');
+
+        // const colorBg = () => {
+        //     document.body.style.backgroundColor = color.value;
+            
+        //     if(color.value === '#ffffff'){ 
+        //         text.textContent = `컬러 코드 : ${color.value} (white)`;
+        //     }else if(color.value === '#000000'){
+        //         text.textContent = `컬러 코드 : ${color.value} (black)`;
+        //     }else{
+        //          text.textContent = `컬러 코드 : ${color.value}`;
+        //     }
+        // }
+        
+        // color.addEventListener('input', colorBg);
+
+            const text = document.querySelector('#coloText');
+            const color = document.querySelector('#colorPicker');
+
+            const colorBg = () => {
+                document.body.style.backgroundColor = color.value;
+                if(color.value === '#ffffff'){
+                    text.textContent = `컬러코드 : ${color.value} (white)`;
+                }else if(color.value === '#000000'){
+                    text.textContent = `컬러코드 : ${color.value} (black)`;
+                }else{
+                    text.textContent = `컬러코드 : ${color.value}`;
+                }
+            }
+            color.addEventListener('input',colorBg);
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="ko">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>컬러피커_4</title>
+                <link rel="stylesheet" href="style.css">
+                <script src="js.js" defer></script>
+        </head>
+<body>
+
+    <!-- 
+        탬플릿 문자열 표시
+        1. '+'사용
+        = 일반 텍스트와 가져온 값, 식 등 프로그래밍 코드를 조합
+
+        2. 템플릿 문자열
+        = 템플린 리터럴('${}') = 템플릿 문자열
+        = 최종적으로 표시하고 싶은 내용 전체를 ``(역음부호,백틱,백쿼테이션)으로 둘러싸는 것
+        = ``(역음부호,백틱,백쿼테이션)은 코드와 글자를 같이 사용할 수 있다
+        = 변수나 상수 등 문자열 이외의 코드를 '${}'로 둘러싼다
+    -->
+
+    <div>
+        <p id="coloText">컬러 코드 검색</p> <!-- 1. 어디에 -->
+            <input type="color" id="colorPicker">
+    </div>
+
+    <script>
+        // console.log(document.querySelector('#colorPicker').value
+        // document.querySelector('#coloText').innerHTML = '<h1>컬러 코드 : </h1>';
+       
+        //  document.querySelector('#coloText').textContent = `컬러코드 : ${document.querySelector('#colorPicker').value}`;
+
+        document.querySelector('#coloText').textContent =  `컬러코드 : ${document.querySelector('#colorPicker').value}`
+    </script>
+    
+</body>
+</html>

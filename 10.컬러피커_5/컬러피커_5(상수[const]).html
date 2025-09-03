@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="ko">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>컬러피커_5</title>
+                <link rel="stylesheet" href="style.css">
+                <script src="js.js" defer></script>
+        </head>
+<body>
+
+    <!-- 
+       상수로 깔끔하게 코드 정리
+
+       1. 상수란
+       = 다양한 문자열이나 수치,식을 넣어둘 수 있는 상자 같은 것
+       = 그 상자에 무엇이 들어있는지 알기 쉽도록 이름 라벨(상수명)을 관리하거나 사용
+       = 불필요한 입력 실수를  막을 수 있고 무슨 코드를 작성하고 있는지 알기 쉽게 정리
+            const(변하지 않는 값) = 상수
+
+       2. 상수 기본법
+       = '상수선언' -> 'const'를 선언한다
+       = '상수명'을 붙인다, 기본적으로 자신이 원하는 대로 붙일 수 있다
+       = '=(등호)'를 사용하여 '상수값'을 지정     
+            const 상수명 = 상수값;
+
+        3. 상수명의 규칙
+        = 어떤 데이터가 들어 있는 상수인지 알기 쉬운 이름을 지정
+        = '$','_(언더바)'만 사용
+        = 공백을 사용하지 않기 (my color -> myColor)
+        = 예약어(자바스크립트에서 이미 특별한 의미를 가진 키워드로 설정된 언어)X 
+    -->
+
+    <div>
+        <p id="coloText">컬러 코드 검색</p>
+            <input type="color" id="colorPicker">
+    </div>
+
+    <script>
+        // console.log(document.querySelector('#colorPicker').value
+        // document.querySelector('#coloText').innerHTML = '<h1>컬러 코드 : </h1>';
+        // document.querySelector('#coloText').textContent = `컬러코드 : ${document.querySelector('#colorPicker').value}`;
+        // const text = document.querySelector('#coloText');
+        // const color = document.querySelector('#colorPicker');
+
+        // text.textContent = `컬러 코드 : ${color.value}`;
+
+        // const text = document.querySelector('#coloText');
+        // const color = document.querySelector('#colorPicker');
+
+        // text.textContent = `컬러코드 : ${color.value}`;
+
+        const text = document.querySelector('#coloText');
+        const color = document.querySelector('#colorPicker');
+
+        text.textContent = `컬러코드 : ${color.value}`;
+    </script>
+    
+</body>
+</html>

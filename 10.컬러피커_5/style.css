@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    display: grid;
+    place-items: center; /* 수평(width) 중앙정렬 */
+    height: 100vh;
+    background-color: #000;
+}
+
+div{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 14rem; /* 16px = 1rem 14 * 16 = 224px */
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+}
