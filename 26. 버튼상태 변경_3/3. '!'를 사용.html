@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'!'를 사용</title>
+    <style>
+        body{
+            text-align: center;
+            padding: 2rem;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        #btn{
+            background: #0bd;
+            padding: .75rem 1rem;
+            border-radius: 8px;
+        }
+
+        #btn:disabled{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        이용약관 동의
+        <input type="checkbox" id="check">
+    </label>
+
+    <input type="submit" value="전송" id="btn" disabled>
+
+    <!-- 
+        ! : 반대를 뜻한다
+        !== : 똑같지 않다
+    -->
+    
+    <script>
+        // const isAgreed = document.querySelector('#check');
+        // const btn = document.querySelector('#btn');
+
+        // isAgreed.addEventListener('change',()=>{
+        //    btn.disabled = !isAgreed.checked;
+        // });
+
+        const isAgreed = document.querySelector('#check');
+        const btn = document.querySelector('#btn');
+
+        isAgreed.addEventListener('change',()=>{
+            btn.disabled = !isAgreed.checked;
+        })
+    </script>
+</body>
+</html>
