@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 안에 있는 이미지 표시</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        #menu{
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            max-width: 1020px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        img{
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        h1{
+            margin: 30px 0;
+            font-size: 40px;
+        }
+
+        h2{
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fruit Juice</h1>
+    <div id="menu"></div>
+
+    <!-- 
+       <배열 안에 있는 요소를 가져오는 방법> 
+        = 배열 안 요소를 가져오려면 배열의 상수명 뒤에 있는 []를 쓰고 그 안에서 가져오고 싶은 요소의 인덱스(번호)를 가져오기
+            ex) 배열[인덱스]
+        = 인덱스는 0부터 시작 
+        = 제일 먼저 등장하는 요소나 일반적으로 가장 처음 세는 것이 배열의 0번째
+        = 요소가 존재하지 않는 인데스를 지정하면 'undefinde : 정의되지 않았다(즉 그 상자의 해당 번호 공간에 아무것도 들어 있지 않다)'가 출력
+
+    -->
+    
+    <script>
+        const menu = document.querySelector('#menu');
+        
+        const list = [
+            'strawberry.jpg',
+            'lime.jpg',
+            'lemon.jpg',
+            'mango.jpg',
+            'fig.jpg',
+            'apple.jpg',
+       ];
+       console.log(list[0]);
+
+        const content = `
+                            <div> <img src="images/${list[0]}" alt="img"> </div>
+                            <div> <img src="images/${list[1]}" alt="img"> </div>
+                            <div> <img src="images/${list[2]}" alt="img"> </div>
+                            <div> <img src="images/${list[3]}" alt="img"> </div>
+                            <div> <img src="images/${list[4]}" alt="img"> </div>
+                            <div> <img src="images/${list[5]}" alt="img"> </div>
+                        `
+
+        menu.insertAdjacentHTML('beforeend',content)
+    </script>
+</body>
+</html>
