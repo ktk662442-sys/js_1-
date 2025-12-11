@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+
+    <!-- 
+        객체
+        = 'window'는 동작하도록 하려는 대상이 되는 객체
+        = 자바스크립트에 이미 준비된 객체들로 '내장 객체' 또는 '빌트인 객체'라고 한다
+        = 속성값이 함수일 때 이 속성을 '메서드'라고 부른다
+
+        <메서드>
+        = 호출할 때는 '객체명.키()';
+    -->
+
+    <script>
+        // 메서드
+        // 
+        const greenting = {
+            message : function(){
+                console.log('안녕하세요')
+            }
+        }
+        greenting.message();
+        // 'greenting'이라는 상수에 넣은 객체의 키가  'message'이고 값은 함수로 되어있다
+    </script>
+    
+</body>
+</html>
