@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열과 객체를 조합하여 데이터를 하나로 정리</title>
+     <style>
+        body{
+            text-align: center;
+        }
+
+        #menu{
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            max-width: 1020px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        img{
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        h1{
+            margin: 30px 0;
+            font-size: 40px;
+        }
+
+        h2{
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fruit Juice</h1>
+    <div id="menu"></div>
+
+    <!-- 
+        배열과 객체를 조합하여 데이터를 하나로 정리
+        <배열에 객체 넣기>
+        = 여러 객체를 하나로 정리하기 위해 '배열'을 사용
+        = 객체 요소는 '{중괄호}' 사용
+
+        <값 가져오기>
+        = 객체의 값을 가져오기 : 객체명.키
+        = 배열 안에 있는 요소를 가져오기 : 배열[index] 
+        = 배열 안에 있는 객체의 값 가져오기 : 배열[index].키 
+    -->
+    
+    <script>  
+       const menu = document.querySelector('#menu');
+       
+       const list = [
+        {
+             name : '딸기',
+            img : 'strawberry.jpg',
+            print : '4,000'
+        },
+        {
+             name : '라임',
+            img : 'lime.jpg',
+            print : '4,000'
+        },
+        {
+             name : '레몬',
+            img : 'lemon.jpg',
+            print : '4,000'
+        },
+        {
+             name : '망고',
+            img : 'mango.jpg',
+            print : '4,000'
+        },
+        {
+             name : '무화과',
+            img : 'fig.jpg',
+            print : '4,000'
+        },
+         {
+             name : '사과',
+            img : 'apple.jpg',
+            print : '4,000'
+        },
+       ]
+       console.log(list[0].name); //배열 안에 있는 객체의 값 가져오기
+
+       for(let i = 0; i<= list.length; i++){
+        const content = `<div><img src='images/${list[i]}' alt=''></div>`;
+        menu.insertAdjacentHTML('beforeend',content)
+       }
+    </script>
+</body>
+</html>
