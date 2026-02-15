@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분할 대입으로 깔끌한 코드 만들기</title>
+     <style>
+        body{
+            text-align: center;
+        }
+
+        #menu{
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            max-width: 1020px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        img{
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        h1{
+            margin: 30px 0;
+            font-size: 40px;
+        }
+
+        h2{
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fruit Juice</h1>
+    <div id="menu"></div>
+
+    <!-- 
+       <가져온 값을 상수화하기>
+       = 가져올 값을 각각 '상수'로 정의
+       = 코드가 길어질수록 번거로워진다
+
+       <분할 대입 사용하기>
+       = 한 번에 여러 속성 값을 상수에 대입할 수 있다
+       = 객체에서 값을 가져올 때 유용하다 (객체 분할 대입, 배열 분할 대입)
+
+       1) 객체 분할 대입(Object Destructuring)
+            ex)
+                const 객체명 = {
+                    키1 :  값1
+                    키2 :  값2
+                    키3 : 값3
+                }
+                const {키1, 키2, 키3} = 객체명
+                
+       2) 배열 분할대입(Array Destructuring)
+            ex)
+                const 배열명 = [값1, 값2, 값3]
+                const [변수1, 변수2, 변수3] = 배열명
+                const {키1, 키2, 키3} = 객체명
+            
+        <배열과 객체 사용법 구분>
+        = 배열과 객체는 사용하는 방법이 다르다
+        = 배열은 순서가 중요할 때 사용한다
+        = 객체는 키와 값이 한 쌍으로 이루어진 데이터를 표현할 때 사용한다
+
+        <Math 객체>
+        = 수학과 관련된 다양한 기능을 제공하는 내장 객체
+        = 애니메이션에서 복잡한 움직임을 설정하거나 랜덤으로 움직이게 하는 등 다양하게 사용한다
+            ex)
+                Math.floor(숫자) : 소수점 이하 버리기 = Math.floor(9.28) => 9
+                Math.ceil(숫자) : 소수점 올림 = Math.ceil(9.28) => 10
+                Math.round(숫자) : 소수점 반올림 = Math.round(9.28) => 9
+                Math.random() : 0 이상 1 미만의 랜덤한 수를 반환 = Math.random() => 0.123456789
+    -->
+    
+    <script>  
+      const menu = document.querySelector('#menu')
+
+
+      const list = [
+        {
+             name : '딸기',
+            img : 'strawberry.jpg',
+            price : '4,000'
+        },
+        {
+             name : '라임',
+            img : 'lime.jpg',
+            price : '4,000'
+        },
+        {
+             name : '레몬',
+            img : 'lemon.jpg',
+            price : '4,000'
+        },
+        {
+             name : '망고',
+            img : 'mango.jpg',
+            price : '4,000'
+        },
+        {
+             name : '무화과',
+            img : 'fig.jpg',
+            price : '4,000'
+        },
+         {
+             name : '사과',
+            img : 'apple.jpg',
+            price : '4,000'
+        },
+       ]
+       console.log(list[1].name)
+
+       for(let i = 0; i < list.length; i++){
+        // 상수 선언
+        // const name = list[i].name;
+        // const img = list[i].img;
+        // const price = list[i].price;
+
+        // 분할 대입
+        const {name, img, price} = list[i]
+
+        const content = `
+                            <div>
+                                <img src='images/${img}' alt=''>
+                                <h2>${name}</h2>
+                                <p>${price}원</p>
+                            </div>
+                        `
+        menu.insertAdjacentHTML('beforeend',content)
+       }
+
+    </script>
+</body>
+</html>
